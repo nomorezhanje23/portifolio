@@ -1,6 +1,678 @@
-/******* Change Box Model ***************/
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
+/* LARGE VIEW ONLY */
+
+@media (min-width: 810px) {
+  * {
+    box-sizing: border-box;
+    background-color: white;}
+  
+  body {
+    background: url('../images/site/small_check.jpg');
+    margin: 50px;
+    padding: 50px;
+    
+  }
+  
+  #wrapper{
+    border: solid 5px skyblue;
+    border-radius: 10px;
+    
+  }
+  
+   ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  
+  /* Style the header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin:10px;
+  }
+  
+  #top-header{
+    margin: 20px;
+    padding:20px;
+  }
+  
+  .siteName{
+    color: black;
+  }
+  
+  #tools{
+    color: black;
+  }
+  /* Style the navigation */
+  .navigation {
+    color:white;
+    margin: 10px;
+     
+  }
+  
+  nav ul {
+    list-style: none;
+    justify-content:space-evenly;
+    display: flex;
+    background-color: black;
+    margin:10px;
+    padding: 10px; 
+    text-align: center; 
+  }
+  
+  nav li {
+    margin: 0 10px;
+    background-color: white;
+    
+  }
+  
+  /* Style the hero section */
+  .hero {
+    background: url('../images/vehicles/delorean.jpg') no-repeat center;
+    color: black;
+    text-align: left;
+    padding: 10% 0;
+    margin-top: 10px;
+  }
+  
+  .welcome h1 {
+    font-size: 36px;
+    margin-left:50px;
+    padding-left: 50px;
+  
+  }
+  
+  .welcome{
+    text-align: left;
+  }
+  
+  .summary { 
+    display: grid;
+    position:absolute;
+    text-align: left;
+    margin-left:15%;
+    margin-top: 20px ;
+    background: whitesmoke;
+    opacity: .9;
+    margin-bottom: auto;
+    color:blueviolet;
+    font-weight: bold;
+    
+  }
+  
+  .summary h2, p{
+    margin: 2px;
+    
+  }
+  
+  .name{
+    padding:5px;
+  }
+  .summary h2, p {
+   background: whitesmoke;
+   justify-content: space-between ;
+  }
+  
+  .specs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+  }
+  .upgrades{
+    display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 5px;
+      padding: 5px;
+      text-align: center;
+  }
+  
+  .box{
+    grid-row:1/2 ;
+    background-color: skyblue;
+    justify-content: center;
+    padding: 10px;
+    border: grey solid 1px;
+    text-align: center;
+  }
+  
+  .flux{
+    grid-row:2/3;
+    grid-column: 1/2;
+    justify-content: center;
+  }
+  
+  .box1{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    background-color: skyblue;
+    padding: 10px;
+    justify-content: center;
+    border: grey solid 1px;
+    text-align: center;
+  }
+  .flame{
+    grid-row:2/3 ;
+    grid-column: 2/3;
+    justify-content:center;
+  }
+  
+  .box2{
+    grid-row:3/4;
+    grid-column: 1/2;
+    background-color: skyblue;
+    justify-content: center;
+    padding: 10px;
+    border: grey solid 1px;
+    text-align: center;
+  }
+  .bumber{
+    grid-row: 4/5;
+    grid-column: 1/2;
+  }
+  
+  .box3{
+    grid-row:3/4 ;
+    grid-column: 2/3;
+    background-color: skyblue;
+    padding: 10px;
+    justify-content: center;
+    border: grey solid 1px;
+    text-align: center;
+  }
+  .cap{
+    grid-row: 4/5;
+    grid-column: 2/3;
+  }
+  
+  .reviews{
+    font-weight: lighter;
+    margin-left: 50px;
+    justify-content: space-between;
+    font-size: large;
+  }
+  
+  .footer {
+    margin: 10px;
+    padding: 20px;
+    background-color: white;
+  }
 }
+
+/* MEDIUM VIEW*/
+
+@media (max-width: 768px) {
+  * {
+    background-color: white;}
+    
+  
+  /* Style the header */
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #top-header{
+    margin: 20px;
+    padding:20px;
+  }
+  
+  .siteName{
+    color: black;
+  }
+  
+  #tools{
+    color: black;
+  }
+  /* Style the navigation */
+  .navigation {
+    color:white;
+    margin: 10px;
+     
+  }
+  
+  nav ul {
+    list-style: none;
+    justify-content:space-evenly;
+    display: flex;
+    background-color: black;
+    margin:10px;
+    padding: 10px;  
+  }
+  
+  nav li {
+    margin: 0 5px;
+    background-color: black;
+  }
+  
+  /* Style the hero section */
+  .hero {
+    background: url('../images/vehicles/delorean.jpg') no-repeat center;
+    color: black;
+    text-align: left;
+    padding: 20%;
+    margin-top: 10px;
+  }
+  
+  .welcome h1 {
+    font-size: 30px;
+    margin-left:20px;
+    padding-left: 20px;
+  
+  }
+  
+  .welcome{
+    text-align: left;
+  }
+  
+  .summary { 
+    position:absolute;
+    text-align: left;
+    margin-left:5%;
+    background: whitesmoke;
+    padding-top: 20px;
+    opacity: .9;
+    color:blueviolet;
+    font-weight: bold;
+    
+  }
+  
+  .name{
+    padding:1px;
+  }
+  .summary h2, p {
+   background: whitesmoke;
+  }
+
+  .upgrades{
+    display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 5px;
+      padding: 5px;
+      text-align: center;
+  }
+  
+  .specs{
+    grid-gap: 20px;
+    padding: 20px;
+    gap: 5px;
+  }
+ 
+  
+  .box{
+    grid-row:1/2 ;
+    background-color: skyblue;
+    justify-content: center;
+    padding: 10px;
+    border: grey solid 1px;
+    text-align: center;
+  }
+  
+  .flux{
+    grid-row:2/3;
+    grid-column: 1/2;
+    justify-content: center;
+  }
+  
+ .box1{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    background-color: skyblue;
+    padding: 10px;
+    justify-content: center;
+    border: grey solid 1px;
+    text-align: center;
+  }
+  .flame{
+    grid-row:2/3 ;
+    grid-column: 2/3;
+    justify-content:center;
+  }
+  
+  .box2{
+    grid-row:3/4;
+    grid-column: 1/2;
+    background-color: skyblue;
+    justify-content: center;
+    padding: 10px;
+    border: grey solid 1px;
+    text-align: center;
+  }
+  .bumber{
+    grid-row: 4/5;
+    grid-column: 1/2;
+  }
+  
+  .box3{
+    grid-row:3/4 ;
+    grid-column: 2/3;
+    background-color: skyblue;
+    padding: 10px;
+    justify-content: center;
+    border: grey solid 1px;
+    text-align: center;
+  }
+  .cap{
+    grid-row: 4/5;
+    grid-column: 2/3;
+  }
+  
+  .reviews{
+    font-weight: lighter;
+    margin-left: 50px;
+    justify-content: space-between;
+    font-size: large;
+  }
+
+}
+
+
+/*SMALL VIEWS*/
+@media (max-width: 420px){
+ header, section {
+    display: block;
+}
+nav li {
+  /*margin: 0 5px;*/
+  background-color: white;
+  color: black;
+}
+nav ul {
+  justify-content: space-evenly;
+  display: block;
+  margin: 10px;
+  padding: 10px;
+  background-color: white;
+  list-style: none ;
+}
+
+ul {
+  display: block;
+  list-style-type: none;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+.summary {
+  text-align: left;
+  margin-left: 5%;
+  opacity: .9;
+  color: blueviolet;
+  font-weight: bold;
+  background-color: white;
+}
+.summary h2, p {
+  background: white;
+}
+
+.hero{
+  padding: 40%;
+  background: none;
+}
+}
+
+#inv-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  justify-content: center;
+  padding: 20px;
+}
+
+#inv-display img{
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+ul#inv-display{
+  gap: 10px;
+}
+
+li#inv-display{
+  border: solid black 2px;
+  border-radius: 10px;
+}
+
+#inv-detail{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+li{
+  padding-left: 25px;
+}
+
+#inv-detail img{
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/*detailed large view*/
+@media (min-width: 810px) {
+
+}
+
+
+/*detailed medium view*/
+@media (max-width: 768px) {
+
+}
+
+/*detailed small view*/
+@media (max-width: 420px){
+ 
+  #inv-detail{
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+}
+
+/* FORM */
+
+
+
+h1 {
+  text-align: center;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: skyblue;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  background-color: skyblue;
+}
+
+input {
+  width:75%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  margin: 5px;
+  
+}
+
+button {
+  background-color: skyblue;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-link {
+  text-decoration: none;
+  color: skyblue;
+}
+
+/*.flash-message {
+  background-color: #FFFFCC;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #CCCC00;
+  border-radius: 5px;
+}*/
+
+.pasi{
+background-color: skyblue;
+padding: 5px;
+margin: 5px;
+}
+
+.pasi button{
+  border:2px solid #000;
+  border-radius:5px;
+  padding:2px;
+  margin-bottom: 10px;
+  font-size: small;
+  width:30%;
+  text-align: center;
+  color: black;
+  background-color: white;
+}
+
+#rese, .rese1{
+background-color: skyblue;
+padding: 10px;
+border-radius: 10px;
+max-width: 450px;
+margin: 0 auto;
+}
+
+#pswdBtn{
+  border:2px solid #000;
+  border-radius:5px;
+  padding:2px;
+  margin-bottom: 10px;
+  font-size: small;
+  width:30%;
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+
+.pasi p{
+  background-color: skyblue;
+}
+
+/* register */
+
+#pswdBtn1{
+  border:2px solid #000;
+  border-radius:5px;
+  padding:2px;
+  margin: 5px;
+  margin-bottom: 5px;
+  font-size: small;
+  width:30%;
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+
+.pasi1 button{
+  background-color: white;
+  margin: 5px;
+  border:2px solid #000;
+  border-radius:5px;
+  padding:2px;
+  margin-bottom: 10px;
+  font-size: small;
+  width:30%;
+  text-align: center;
+  color: black;
+  
+  
+}
+.pasi1{
+  background-color: skyblue;
+}
+
+.pasi1 p{
+  background-color: skyblue;
+}
+
+.rese2{
+  background-color: white;
+  border:2px solid #000;
+  border-radius:5px;
+  padding:2px;
+  margin-bottom: 10px;
+  font-size: small;
+  width:50%;
+  text-align: center;
+}
+
+
+/*  styles for invalid form input 
+input:required:invalid {
+  background-color: orangered;
+ }*/
+ 
+/*  styles for valid form input */
+input:focus:valid {
+  background-color: greenyellow;
+}
+
+.notice {
+  color: red;
+  font-weight: bold;
+  margin-left: 15px;
+  padding: 5px;
+}
+
+#classification_id{
+  position: sticky;
+}
+
+/* manage
+
+.management a {
+  padding: .7em;
+  margin: 2em;
+  text-decoration: none;
+   text-align: center; 
+  font-size: 1.2em;
+  color: black;
+}
+
+ .management {
+  padding: 1em;
+  margin-top: -2em;
+  margin-bottom: -2em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+} */
+
+.pswrdchange
+{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+

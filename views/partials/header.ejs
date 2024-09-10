@@ -1,0 +1,15 @@
+<header id="top-header"></header>
+    <div class="siteName">
+      <a href="/" title="Return to home page">Portifolio Car App</a>  
+    </div>
+    <div id="tools">
+      <% if (locals.accountData) { %>
+          <a href="/account/">Welcome <%= locals.accountData.account_firstname %></a>
+          <br>
+          <a href="/account/logout">Logout</a>
+      <% } else  { %>
+          <a  title="Click to log in" href="/account/login">MY ACCOUNT</a>
+      <% } %>
+    </div>
+  </header>
+  <script src="/js/script.js"></script>
