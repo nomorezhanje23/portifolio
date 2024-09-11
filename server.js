@@ -29,8 +29,6 @@ app.use(static)
 app.get("/", baseController.buildHome)
 // Inventory routes
 app.use("/inv", inventoryRoute)
-// images
-app.use("/images/vehicles", express.static('vehicles'));
 
 /* ***********************
  * Local Server Information
