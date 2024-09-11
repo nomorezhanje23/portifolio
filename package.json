@@ -1,13 +1,13 @@
 {
-  "name": "cse340",
+  "name": "portifolio",
   "version": "1.0.0",
-  "description": "Starter project for CSE 340",
+  "description": "Portifolio Car Application",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
-  "author": "",
+  "author": "Nomore Zhanje",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.3",
