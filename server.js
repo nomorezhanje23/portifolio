@@ -11,23 +11,8 @@ const env = require("dotenv").config()
 const inventoryRoute = require("./routes/inventoryRoute");
 const baseController = require("./controllers/baseController")
 const app = express()
-const pool = require('./database/');
 const static = require("./routes/static")
 
-
-/* ***********************
- * Middleware - activity 4
- * ************************/
-app.use(session({
-  store: new (require('connect-pg-simple')(session))({
-    createTableIfMissing: true,
-    pool,
-  }),
-  secret: process.env.SESSION_SECRET,
-  resave: true,
-  saveUninitialized: true,
-  name: 'sessionId',
-}));
 
 /* ***********************
  * View Engine and Templates
