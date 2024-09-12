@@ -118,6 +118,9 @@
    justify-content: space-between ;
   }
   
+  h3 {
+    color: skyblue;
+  }
   .specs{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -195,6 +198,7 @@
     margin-left: 50px;
     justify-content: space-between;
     font-size: large;
+    background-color: white;
   }
   
   .footer {
