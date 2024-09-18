@@ -1,0 +1,43 @@
+<%# Unit 5 Assignment %>
+<% if (title) { %>
+    <h1><%= title %></h1>
+    <% } else {
+      res.redirect('/')
+    } %>
+
+<%- messages() %>
+
+<% if (errors) { %>
+    <ul class="notice">
+   <% errors.array().forEach(error => { %>
+     <li><%= error.msg %></li>
+  <%  }) %>
+   </ul>
+  <% } %>
+
+  <% let account = locals.accountData %>
+
+  <% if (account.account_type == "Employee" || account.account_type == "Admin") { %>
+         <h2>Welcome <%= locals.accountData.account_firstname %></h2>
+         <br>
+         <p>You are logged in</p>
+         <br>
+         <div class="management">
+           <a href="/account/edit/<%= locals.accountData.account_id %>">Edit Account Information</a>
+         </div>
+         <br>
+         <div class="management">
+          <h3>Inventory Management</h3>
+           <a href="/inv">Manage inventory</a>
+         </div>
+       
+       <% } else  { %>
+         <h2>Welcome <%= locals.accountData.account_firstname %></h2>
+         <br>
+         <p>You are logged in</p>
+         <br>
+         <div class="management">
+           <a href="/account/edit/<%= locals.accountData.account_id %>">Edit Account Information</a>
+         </div>
+       <% } %>
+    

@@ -11,9 +11,46 @@ const env = require("dotenv").config()
 const inventoryRoute = require("./routes/inventoryRoute");
 const baseController = require("./controllers/baseController")
 const utilities = require("./utilities/index");
-const app = express()
 const static = require("./routes/static")
+const session = require("express-session");
+const pool = require('./database/');
+const bodyParser = require("body-parser")
+const accountController = require("./routes/accountRoute")
+const cookieParser = require("cookie-parser")
 
+const app = express();
+
+
+/* ***********************
+ * Middleware - activity 4
+ * ************************/
+app.use(session({
+  store: new (require('connect-pg-simple')(session))({
+    createTableIfMissing: true,
+    pool,
+  }),
+  secret: process.env.SESSION_SECRET,
+  resave: true,
+  saveUninitialized: true,
+  name: 'sessionId',
+}));
+
+// Express Messages Middleware
+app.use(require('connect-flash')())
+app.use(function(req, res, next){
+  res.locals.messages = require('express-messages')(req, res)
+  next()
+});
+
+
+// Unit 4, Process Registration Activity
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
+
+//Unit 5, Log in activity
+app.use(cookieParser())
+//Unit 5, Log in Process activity
+app.use(utilities.checkJWTToken)
 
 /* ***********************
  * View Engine and Templates
@@ -31,6 +68,12 @@ app.use(static)
 app.get("/", utilities.handleErrors(baseController.buildHome))
 // Inventory routes
 app.use("/inv", inventoryRoute)
+// Account routes - Unit 4, activity
+app.use("/account", utilities.handleErrors(accountController));
+// error route - unit 3, activity
+app.use("/account", require("./routes/errorRoute")); //ongorora apa
+// check this out!!
+app.use("/account", require("./routes/accountRoute"));
 
 // File Not Found Route - must be last route in list
 app.use(async (req, res, next) => {
