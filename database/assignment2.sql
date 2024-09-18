@@ -12,8 +12,6 @@ VALUES (
     'Iam1ronM@n'
 );
 
-
-
 -- Updating the account type to 'Admin' for an account using ID
 UPDATE 
     account
@@ -39,7 +37,6 @@ SET
     inv_description = REPLACE(inv_description, 'small interior', 'a huge interior')
 WHERE 
     inv_make = 'GM';
-
 
 -- Retrieving information about inventory items with a classification of 'Sport'
 SELECT 
