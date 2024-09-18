@@ -7,7 +7,11 @@ Link for presentation: https://docs.google.com/presentation/d/10ZSmpvBqM6V3coRIF
 ## Project Name: 
 Portfolio Car Application
 ## Introduction: 
- Empowering car dealerships with an innovative portfolio platform.
+
+Empowering car dealerships with an innovative portfolio platform.
+The idea for this project came from my love for technology and automobiles. I wanted to create a system that would simplify car dealership management while offering users an intuitive experience.
+This is a Portfolio Project for Holberton School (ALX-Africa): https://intranet.alxswe.com/projects/565
+
 ## Deployed Site Link: 
 https://portifolio-o02j.onrender.com
 ## Installation:
